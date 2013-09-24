@@ -168,7 +168,7 @@ class facebookModule extends AbstractModule{
 	}
 
 	public function registred(){
-		$data = $this->model->querySelect($this->acore->fb_table,FALSE,"*",$this->acore->fb_field." = :idfb",array('idfb'=>$this->user['id']));
+		$data = $this->model->querySelect($this->acore->fb_table,"*",$this->acore->fb_field." = :idfb",array('idfb'=>$this->user['id']));
 		if(is_array($data) && count($data) > 0){
 			return TRUE;
 		}else{
