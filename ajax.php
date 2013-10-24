@@ -28,6 +28,15 @@ $fb = new Facebook(array(
 
 if($app->facebook->authorized($fb)){
 	//User authorized
+	$attachment =  array(
+			'message' => "",
+			'name' => "titulo",
+			'link' => "link",
+			'description' => "description",
+			'picture'=>"logo.jpg"
+	);
+	
+	$result = $fb->api('/me/feed', 'post', $attachment);
 	A::log($app->facebook->user);
 }else{
 	echo "User not authorized.";

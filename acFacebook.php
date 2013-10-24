@@ -12,17 +12,17 @@
 $config = Settings::Init();
 $config->debug = FALSE;
 $config->host = 'localhost';
-$config->user = 'appuser';
-$config->pass = 'dw2012$';
-$config->database = 'appbd';
+$config->user = '';
+$config->pass = '$';
+$config->database = '';
 
-$config->fb_apikey = "166059490265018";
-$config->fb_secret = "8f5b7b57149b058ddfa416e05a4ccb83";
+$config->fb_apikey = "";
+$config->fb_secret = "";
 $config->fb_table = "usuarios";
 $config->fb_field = "fb_id";
 $config->fb_scope = "publish_stream";
 
-class facebookModule extends AbstractModule{
+class acFacebook extends AbstractModule{
 
 	public $user;
 
